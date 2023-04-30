@@ -11,8 +11,42 @@
 
 body{
     font-size: 18px;
+    padding:0;
+    margin:0;
+    display:flex;
+
 }
 
+/*Layout of aside and main-section*/
+
+#aside-color{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    width:25vw;
+    background-image: url("./images/bg-main-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    padding-left:5vw;
+}
+#card-front{
+    height: 245px;
+    width:447px;
+    background-image: url("./images/bg-card-front.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+#card-back{
+    margin-left: 140px;
+    height: 245px;
+    width:447px;
+    background-image: url("./images/bg-card-back.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#main0inputs
 
 
 
