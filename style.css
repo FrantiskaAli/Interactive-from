@@ -39,14 +39,34 @@ body{
     background-size:contain;
 }
 #card-back{
-    margin-left: 140px;
+    margin-left: 120px;
     height: 245px;
     width:447px;
     background-image: url("./images/bg-card-back.png");
     background-position: center;
     background-repeat: no-repeat;
 }
-#main0inputs
+#main-inputs{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    width:70vw;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+}
+#num-and-name{
+    display:flex;
+    flex-direction: column;
+}
+#expires{
+    display:flex;
+
+}
 
 
 
