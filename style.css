@@ -1,0 +1,51 @@
+/*colors*/
+:root {
+    --active-input-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --input-errors: hsl(0, 100%, 66%);
+    --light: hsl(270, 3%, 87%);
+    --dark: hsl(279, 6%, 55%);
+    --very-dark: hsl(278, 68%, 11%);
+}
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body{
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+input:focus {
+    /*linear gradient outline for active input*/
+    outline: none;
+    padding: 0.5rem;
+    border: double 1.5px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(white, white),
+        linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    /*linear gradient end, source stack overflow*/
+}
+
+
+
+
+
+
+
+
+
+
+.hide {
+    display: none;
+}
