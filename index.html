@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -28,32 +31,40 @@
 
   <aside id="aside-color">
     <figure id="card-front">
-      <img src="./images/card-logo.svg"/>
+      <img src="./images/card-logo.svg" />
       <h1>0000 0000 0000 0000</h1>
       <h2>Jane Appleseed</h2>
       <h2>00/00</h2>
     </figure>
     <figure id="card-back">
-    <h2>000</h2>
+      <h2>000</h2>
     </figure>
   </aside>
   <main id="main-inputs">
     <form>
       <article id="num-and-name">
-        <label for="cardholder" >Cardholder Name</label>
-        <input type="text" placeholder="e.g. Jane Appleseed" name="cardholder" id="cardholder" class="big-input"/>
-
-        <label for="card-number">Card Number</label>
-        <input type="text" placeholder="e.g. 1234 5678 9123 0000" name="card-number" id="card-number" class="big-input"/>
+        <section class="input-details-big">
+          <label for="cardholder" class="main-label">Cardholder Name</label>
+          <input type="text" placeholder="e.g. Jane Appleseed" name="cardholder" id="cardholder" class="big-input" />
+        </section>
+        <section class="input-details-big">
+          <label for="card-number" class="main-label">Card Number</label>
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000" name="card-number" id="card-number"
+            class="big-input" />
+        </section>
       </article>
-      <article id="expires">
-        <label for="exp-date">Exp. Date (MM/YY)</label>
+      <article id="expires-section">
+        <fieldset id="exp-date-full">
+        <legend for="exp-date" class="main-label">Exp. Date (MM/YY)</legend>
         <input type="number" max="2" placeholder="MM" id="exp-date" name="exp-date" class="expires" />
-        <input type="number" max="2" placeholder="YY" id="exp-date-yy"  class="expires"/>
-        <label for="CVC">CVC</label>
-        <input type="number" max="3" placeholder="e.g. 123" id="CVC" name="CVC" class="expires" />
+        <input type="number" max="2" placeholder="YY" id="exp-date-yy" class="expires" />
+        </fieldset>
+        <section id="CVC-input">
+        <label for="CVC" class="main-label">CVC</label>
+        <input type="number" max="3" placeholder="e.g. 123" id="CVC" name="CVC" />
+      </section>
       </article>
-      <button>Confirm</button>
+      <button id="card-confirm">Confirm</button>
 
     </form>
     <div class="attribution">
