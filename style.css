@@ -32,16 +32,33 @@ body {
     justify-content: center;
     padding-left: 5vw;
 }
-
+/*cards styling*/
 #card-front {
     height: 245px;
     width: 447px;
     background-image: url("./images/bg-card-front.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; 
 }
+#on-card-number{
+    font-size: xx-large;
+    padding-top: 8%;
+    margin-bottom:0;
+    letter-spacing: 0.15rem;
+}
+#card-info{
+    padding:5%;
+    font-size:x-small;
+    color:var(--light);
+    text-transform: uppercase;
+    letter-spacing: auto;
 
+}
+#details-on-card{
+    display:flex;
+    justify-content: space-between;
+}
 #card-back {
     margin-left: 120px;
     height: 245px;
@@ -49,6 +66,18 @@ body {
     background-image: url("./images/bg-card-back.png");
     background-position: center;
     background-repeat: no-repeat;
+}
+#back-card-info{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#CVC-on-card{
+    margin-left:60%;
+    color:var(--light);
+    font-size:smaller;
 }
 
 #main-inputs {

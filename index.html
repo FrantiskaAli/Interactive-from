@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -31,13 +31,19 @@
 
   <aside id="aside-color">
     <figure id="card-front">
-      <img src="./images/card-logo.svg" />
-      <h1>0000 0000 0000 0000</h1>
-      <h2>Jane Appleseed</h2>
-      <h2>00/00</h2>
+      <article id="card-info">
+        <img src="./images/card-logo.svg" />
+        <h1 id="on-card-number">0000 0000 0000 0000</h1>
+        <section id="details-on-card">
+          <h2>Jane Appleseed</h2>
+          <h2>00/00</h2>
+        </section>
+      </article>
     </figure>
     <figure id="card-back">
-      <h2>000</h2>
+      <article id="back-card-info">
+      <h2 id="CVC-on-card">000</h2>
+    </article>
     </figure>
   </aside>
   <main id="main-inputs">
@@ -55,14 +61,14 @@
       </article>
       <article id="expires-section">
         <fieldset id="exp-date-full">
-        <legend for="exp-date" class="main-label">Exp. Date (MM/YY)</legend>
-        <input type="number" max="2" placeholder="MM" id="exp-date" name="exp-date" class="expires" />
-        <input type="number" max="2" placeholder="YY" id="exp-date-yy" class="expires" />
+          <legend for="exp-date" class="main-label">Exp. Date (MM/YY)</legend>
+          <input type="number" max="2" placeholder="MM" id="exp-date" name="exp-date" class="expires" />
+          <input type="number" max="2" placeholder="YY" id="exp-date-yy" class="expires" />
         </fieldset>
         <section id="CVC-input">
-        <label for="CVC" class="main-label">CVC</label>
-        <input type="number" max="3" placeholder="e.g. 123" id="CVC" name="CVC" />
-      </section>
+          <label for="CVC" class="main-label">CVC</label>
+          <input type="number" max="3" placeholder="e.g. 123" id="CVC" name="CVC" />
+        </section>
       </article>
       <button id="card-confirm">Confirm</button>
 
