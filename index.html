@@ -35,8 +35,8 @@
         <img src="./images/card-logo.svg" />
         <h1 id="on-card-number">0000 0000 0000 0000</h1>
         <section id="details-on-card">
-          <h2>Jane Appleseed</h2>
-          <h2>00/00</h2>
+          <h2 id="name-on-card">Jane Appleseed</h2>
+          <h2><span id="mm-card">00</span>/<span id="yy-card">00</span></h2>
         </section>
       </article>
     </figure>
@@ -62,7 +62,7 @@
       <article id="expires-section">
         <fieldset id="exp-date-full">
           <legend for="exp-date" class="main-label">Exp. Date (MM/YY)</legend>
-          <input type="number" max="2" placeholder="MM" id="exp-date" name="exp-date" class="expires" />
+          <input type="number" max="2" placeholder="MM" id="exp-date-mm" name="exp-date" class="expires" />
           <input type="number" max="2" placeholder="YY" id="exp-date-yy" class="expires" />
         </fieldset>
         <section id="CVC-input">
