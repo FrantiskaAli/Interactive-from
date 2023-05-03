@@ -181,9 +181,16 @@ input:focus {
     /*linear gradient end, source stack overflow*/
 }
 
-/*cards styling*/
-
-
+/*errors*/
+.error-border{
+    border:1.5px solid var(--input-errors);
+    border-radius:8px;
+}
+.error-message{
+    color: var(--input-errors);
+    font-size: small;
+    padding-top: 2%;
+}
 
 
 

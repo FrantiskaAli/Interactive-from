@@ -62,12 +62,12 @@
       <article id="expires-section">
         <fieldset id="exp-date-full">
           <legend for="exp-date" class="main-label">Exp. Date (MM/YY)</legend>
-          <input type="number" max="2" placeholder="MM" id="exp-date-mm" name="exp-date" class="expires" />
-          <input type="number" max="2" placeholder="YY" id="exp-date-yy" class="expires" />
+          <input type="number"min="1" max="31" placeholder="MM" id="exp-date-mm" name="exp-date" class="expires" />
+          <input type="number" min="23" placeholder="YY" id="exp-date-yy" class="expires" />
         </fieldset>
         <section id="CVC-input">
           <label for="CVC" class="main-label">CVC</label>
-          <input type="number" max="3" placeholder="e.g. 123" id="CVC" name="CVC" />
+          <input type="text" maxlength="3" placeholder="e.g. 123" id="CVC" name="CVC" />
         </section>
       </article>
       <button id="card-confirm">Confirm</button>
