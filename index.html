@@ -42,11 +42,12 @@
     </figure>
     <figure id="card-back">
       <article id="back-card-info">
-      <h2 id="CVC-on-card">000</h2>
-    </article>
+        <h2 id="CVC-on-card">000</h2>
+      </article>
     </figure>
   </aside>
   <main id="main-inputs">
+    <svg class="hide" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
     <form>
       <article id="num-and-name">
         <section class="input-details-big">
@@ -59,18 +60,25 @@
             class="big-input" />
         </section>
       </article>
-      <article id="expires-section">
-        <fieldset id="exp-date-full">
-          <legend for="exp-date" class="main-label">Exp. Date (MM/YY)</legend>
-          <input type="number"min="1" max="31" placeholder="MM" id="exp-date-mm" name="exp-date" class="expires" />
-          <input type="number" min="23" placeholder="YY" id="exp-date-yy" class="expires" />
+      <article class="expires-article">
+        <fieldset class="expires-section">
+          <legend for="exp-date" class="main-label"> Exp. Date (MM/YY)</legend>
+          <section>
+            <input type="number" min="1" max="12" placeholder="MM" id="exp-date-mm" name="exp-date" class="expires" />
+          </section>
+          <section>
+            <input type="number" min="23" placeholder="YY" id="exp-date-yy" class="expires" />
+          </section>
         </fieldset>
-        <section id="CVC-input">
-          <label for="CVC" class="main-label">CVC</label>
-          <input type="text" maxlength="3" placeholder="e.g. 123" id="CVC" name="CVC" />
-        </section>
+        <fieldset class="expires-section">
+          <legend for="CVC" class="main-label">CVC</legend>
+          <section>
+            <input type="text" maxlength="3" placeholder="e.g. 123" class="expires" id="CVC" name="CVC" />
+
+          </section>
+        </fieldset>
       </article>
-      <button id="card-confirm">Confirm</button>
+      <button class="buttons">Confirm</button>
 
     </form>
     <div class="attribution">
@@ -78,14 +86,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </div>
   </main>
-  <!-- Completed state start -->
-  <div class="hide">
-    <h3>Thank you!</h3>
-    <h4>We've added your card details</h4>
-    <button>Continue</button>
-  </div>
-
-
   <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
   <script src="./script.js"></script>
 </body>
