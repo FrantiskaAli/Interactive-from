@@ -8,6 +8,9 @@ $(document).on('change', '#cardholder', function (event) {
 /*card number input*/
 $(document).on('change', '#card-number', function (event) {
   typeOnCard(event.target, $('#on-card-number'))
+  let text = $(this).val().trim()
+  text = text.substr(0, 4) + " " + text.substr(4, 4) + " " + text.substr(8, 4) + " " + text.substr(12);
+  $('#on-card-number').text(text)
 
 });
 //card expiary date
@@ -15,7 +18,7 @@ $(document).on('change', '#exp-date-mm', function (event) {
   typeOnCard(event.target, $('#mm-card'))
 
 });
-$(document).on('change', '#exp-date-yy', function (event) {
+$(document).on('change', '#exp-date-yye', function (event) {
   typeOnCard(event.target, $('#yy-card'))
 
 });
@@ -49,7 +52,7 @@ $('form').on("submit", function (event) {
         } else check++
         break;
       case "card-number":
-        if (/[a-zA-Z`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test($(this).val()) || $(this).val().length < 19) {
+        if (/[a-zA-Z`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test($(this).val()) || $(this).val().trim().length < 16) {
           const errMsg = $('<label>').addClass('error-message').text('Wrong format, number only, full number');
           $(this).after(errMsg);
           $(this).addClass("error-border")

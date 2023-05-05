@@ -71,6 +71,7 @@ body {
     background-image: url("./images/bg-card-back.png");
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 8px;
 }
 
 #back-card-info {
@@ -79,6 +80,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
+    background-size: contain;
 }
 
 #CVC-on-card {
@@ -126,7 +129,7 @@ form {
 }
 
 .big-input,
-.expires{
+.expires {
     padding: 3.5%;
     border: 1.5px solid var(--light);
     border-radius: 8px;
@@ -161,14 +164,14 @@ input::placeholder {
     height: 1.5rem;
     padding: 5%;
     margin-right: 1rem;
-    margin-left:1rem;
-    margin-top:10%;
+    margin-left: 1rem;
+    margin-top: 10%;
 }
 
 
 #CVC {
     height: 1.5rem;
-    width:6rem;
+    width: 6rem;
     padding: 5%;
 }
 
@@ -208,33 +211,34 @@ input:focus {
 .error-message {
     color: var(--input-errors);
     font-size: small;
-    padding-top: 2%; 
+    padding-top: 2%;
 }
 
 #thankyou>h3 {
-font-family: 'Space Grotesk', sans-serif; 
-text-align: center;
-text-transform: uppercase;
-font-size: larger;
-font-weight: lighter;
-letter-spacing: .2rem;
-color: var(--very-dark)
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: lighter;
+    letter-spacing: .2rem;
+    color: var(--very-dark)
 }
+
 #thankyou>h4 {
-    font-family: 'Space Grotesk', sans-serif; 
+    font-family: 'Space Grotesk', sans-serif;
     text-align: center;
     color: var(--dark);
     font-weight: lighter;
-    }
-    
+}
 
-#thankyou{
+
+#thankyou {
     width: 40%;
 }
 
-.attribution{
+.attribution {
     position: absolute;
-    bottom:5px;
+    bottom: 5px;
 }
 
 
@@ -242,4 +246,101 @@ color: var(--very-dark)
 
 .hide {
     display: none;
+}
+
+/*MEDIA QUERRIES*/
+@media screen and (max-width:1200px) {
+    #card-front {
+        margin-left: -10%;
+    }
+
+    #card-back {
+        margin-left: 0%;
+
+    }
+}
+
+@media screen and (max-width:954px) {
+    body {
+        flex-direction: column;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    #aside-color {
+        height: 40vh;
+        width: 100%;
+        background-image: url("./images/bg-main-mobile.png");
+    }
+
+    #card-front {
+        position: absolute;
+        top: 22vh;
+        right: 20vw;
+        margin: 0;
+        z-index: 1;
+    }
+
+    #card-back {
+        position: absolute;
+        top: 2vh;
+        left: 28vw;
+        z-index: 0;
+    }
+
+    #main-inputs {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    form {
+        width: 80%;
+
+    }
+
+    .buttons {
+        font-size: large;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    #card-front {
+        height: 25vh;
+        width: 80vw;
+        top: 17vh;
+        left: 5vw;
+    }
+
+    #card-back {
+        height: 25vh;
+        width: 80vw;
+        top: 2vh;
+        left:20vw;
+        background-size: contain;
+    }
+    #on-card-number {
+        font-size:large;
+       
+    }
+    #CVC-on-card {
+        font-size: 18px;
+    }
+    #card-info {
+        padding: 10%;
+    }
+    form{
+        width: 98%;
+        justify-self: flex-start;
+    }
+    #main-inputs {
+        padding-top:10%;
+        justify-content: flex-start;
+    }
+    #thankyou {
+        width: 98%;
+        font:2rem;
+        padding-top:10%;
+    }
 }
